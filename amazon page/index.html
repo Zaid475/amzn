@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- amazon icon -->
+    <link
+      rel="icon"
+      href="https://icons.iconarchive.com/icons/bokehlicia/pacifica/256/amazon-icon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+   
+    <!-- footer css -->
+     <link rel="stylesheet" href="./footer.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazone-Home Page</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      #navbar {
+        color: white;
+        height: 60px;
+        background-color: #131921;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        /* flex-direction: row-reverse;
+                    flex-direction: column;
+                    flex-direction: column-reverse; */
+        /* justify-content: space-between; */
+        /* justify-content: space-evenly; */
+        /* justify-content: space-around; */
+      }
+      #leftDiv {
+        display: flex;
+        /* border: 1px solid white; */
+        width: 22%;
+        height: 80%;
+        justify-content: space-between;
+        /* border: 1px solid blue; */
+      }
+      #logoDiv {
+        width: 44%;
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #logoDiv:hover {
+        border: 1px solid white;
+        border-radius: 2px;
+      }
+      #addressDiv {
+        width: 54%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid red; */
+      }
+      #addressDiv:hover {
+        border: 1px solid white;
+        border-radius: 2px;
+      }
+
+      #addressP {
+        color: rgb(205, 204, 204);
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      #addressh5 {
+        font-size: 14px;
+        /* letter-spacing: 6px; */
+      }
+      #centerDiv {
+        width: 50%;
+        /* border: 4px solid red; */
+        display: flex;
+        height: 66%;
+        align-items: center;
+        border-radius: 8px;
+      }
+
+      #centerDiv:focus-within {
+        border: 3px solid #faaa42;
+      }
+
+      #centerSection {
+        height: 100%;
+        width: 8%;
+        /* border: 1px solid red; */
+        border-radius: 6px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        background-color: #e6e6e6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid rgb(190, 190, 190);
+      }
+      #centerSection:hover {
+        background-color: #d5d5d5;
+      }
+
+      #centerSection p,
+      span {
+        font-size: 12px;
+        color: rgb(96, 96, 96);
+      }
+      #centerSearch {
+        height: 100%;
+        width: 84%;
+        /* border: 1px solid white; */
+        background-color: white;
+        color: black;
+        display: flex;
+        align-items: center;
+      }
+      #centerSearch input {
+        height: 24px;
+        width: 96%;
+        margin: auto;
+        font-size: 16px;
+        border: none;
+        outline: none;
+      }
+
+      #centerIcon {
+        height: 100%;
+        width: 8%;
+        /* border: 1px solid white; */
+        background-color: #febd69;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      #centerIcon:hover {
+        background-color: #faaa42;
+      }
+      #centerIcon span {
+        font-size: 30px;
+        color: black;
+      }
+
+      #rightDiv {
+        width: 26%;
+        height: 100%;
+        /* border: 1px solid white; */
+        display: flex;
+        justify-content: space-around;
+      }
+      #rightLang {
+        width: 18%;
+        /* border: 1px solid white; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #rightLang > p {
+        margin-left: 6px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      #rightLang > span {
+        color: rgb(206, 206, 206);
+      }
+
+      #rightAccount {
+        width: 30%;
+        /* border: 1px solid white; */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+      }
+      #rightAccount p {
+        font-size: 12px;
+        font-weight: 500;
+      }
+      #rightAccount span {
+        margin-top: -6px;
+      }
+      #rightOrders {
+        width: 16%;
+        /* border: 1px solid white; */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      #rightOrders p {
+        font-size: 12px;
+      }
+      #rightCart {
+        width: 22%;
+        /* border: 1px solid white; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #rightCart span {
+        color: white;
+      }
+
+      #rightCart span:nth-child(1) {
+        font-size: 36px;
+      }
+      #rightCart span:last-child {
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 16px;
+      }
+      /* navBelt */
+      #navBelt {
+        color: white;
+        background-color: #232f3e;
+        font-weight: 400px;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+        height: 38px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      #All {
+        height: 96%;
+        width: 4%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #All > p {
+        font-weight: 700;
+      }
+      #All > span {
+        color: white;
+      }
+      #All:hover {
+        border: 1px solid white;
+        border-radius: 2px;
+      }
+
+      #fresh {
+        height: 96%;
+        width: 4%;
+        padding-left: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+      }
+      #miniTv {
+        height: 96%;
+        width: 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+      }
+      #sell {
+        height: 96%;
+        width: 3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+      }
+      #Bestseller {
+        height: 96%;
+        width: 6%;
+        /* padding-left: 8px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+      }
+
+      #Deals {
+        height: 96%;
+        width: 6%;
+        padding: 0px 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.3px;
+      }
+      #Fashion {
+        height: 96%;
+        width: 4%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 10px;
+        letter-spacing: 0.5px;
+      }
+      #prime {
+        height: 96%;
+        width: 4%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 10px;
+        letter-spacing: 0.5px;
+      }
+      #Electronics {
+        height: 96%;
+        width: 6%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+      }
+      #Customer_Service {
+        height: 96%;
+        width: 8%;
+        /* padding-left: 8px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.3px;
+      }
+      #NR {
+        height: 96%;
+        width: 7%;
+        /* padding-left: 8px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+      }
+      #hnk {
+        height: 96%;
+        width: 8%;
+        /* padding-left: 8px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.3px;
+      }
+      #hnk {
+        display: none;
+      }
+      #Pay {
+        height: 96%;
+        width: 6%;
+        /* padding-left: 8px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+      }
+      #Pay {
+        display: none;
+      }
+      #Computers {
+        height: 96%;
+        width: 5%;
+        /* padding-left: 8px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+      }
+      #Computers {
+        display: none;
+      }
+      #Books {
+        height: 96%;
+        width: 4%;
+        /* padding-left: 8px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+      }
+      #Books {
+        display: none;
+      }
+      #Car {
+        height: 96%;
+        width: 8%;
+        /* padding-left: 8px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+      }
+      #Car {
+        display: none;
+      }
+      .menuCss {
+        height: 96%;
+        width: 4%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+      }
+      .menuHover:hover {
+        border: 1px solid white;
+        border-radius: 2px;
+      }
+
+      .independanceDay {
+        height: 100%;
+        width: 26%;
+      }
+      .independanceDay:hover {
+        border: 1px solid;
+      }
+
+      #All {
+        height: 96%;
+        width: 4%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #All > p {
+        font-weight: 700;
+      }
+      #All > span {
+        color: white;
+      }
+      #All:hover {
+        border: 1px solid white;
+        border-radius: 2px;
+      }
+
+      #fresh {
+        height: 96%;
+        width: 4%;
+        padding-left: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+      }
+      #miniTv {
+        height: 96%;
+        width: 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+      }
+      #sell {
+        height: 96%;
+        width: 3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+      }
+      #Bestseller {
+        height: 96%;
+        width: 6%;
+        /* padding-left: 8px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+      }
+
+      #Deals {
+        height: 96%;
+        width: 6%;
+        padding: 0px 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.3px;
+      }
+      #Fashion {
+        height: 96%;
+        width: 4%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 10px;
+        letter-spacing: 0.5px;
+      }
+      #prime {
+        height: 96%;
+        width: 4%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 10px;
+        letter-spacing: 0.5px;
+      }
+      #Electronics {
+        height: 96%;
+        width: 6%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+      }
+      #Customer_Service {
+        height: 96%;
+        width: 8%;
+        /* padding-left: 8px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.3px;
+      }
+      #NR {
+        height: 96%;
+        width: 7%;
+        /* padding-left: 8px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+      }
+      #menu {
+        display: none;
+      }
+      #rightCart span:nth-child(1) {
+        display: none;
+      }
+      #rightCart span:nth-child(2) {
+        display: none;
+      }
+      /* /*product card container"/ */
+      .image-item {
+        min-width: 100%;
+        height: 600px;
+      }
+
+      .main {
+        position: relative;
+        top: -350px;
+      }
+      .card-product-container {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .card-product {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 20%;
+        max-width: 310px;
+        box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.1),
+          5px 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+      }
+      .card-product h2 {
+        margin: 0;
+        padding: 10px;
+      }
+      .card-product-nested-card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: white;
+        justify-content: space-evenly;
+        max-width: 300px;
+      }
+      .card-nested p {
+        margin: 5px;
+        font-size: 14px;
+      }
+
+      .card-nested img {
+        width: 128px;
+        height: 102px;
+        object-fit: cover;
+      }
+
+      .card-product-btn {
+        font-size: 14px;
+        align-self: flex-start;
+        margin: 7px 10px;
+        padding-left: 0;
+        background-color: transparent;
+        border: none;
+        color: #5aa3b0;
+      }
+      /* todays_deal_ Section */
+      .todays_deals_container {
+        /* border: 1px solid black; */
+        position: relative;
+        z-index: 10;
+        margin: 30px;
+        box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.1),
+          2px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .todays_deals_product_item p {
+        margin-top: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 540;
+        color: #6f7070;
+      }
+      .todays_deals_heading {
+        display: flex;
+        align-items: center;
+        padding: 2px 20px;
+      }
+      .todays_deals_heading p a {
+        color: #2f8b9b;
+        text-decoration: none;
+        padding: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .todays_deals_heading p a:hover {
+        text-decoration: underline;
+      }
+      .todays_deals_product_container {
+        /* background-color: rebeccapurple; */
+        height: 300px;
+      }
+      .todays_deals_product_list {
+        display: flex;
+      }
+      .todays_deals_product_item {
+        width: 220px;
+        margin: 10px;
+        /* border: 1px solid yellow; */
+      }
+      .todays_deals_product_item img {
+        width: 100%;
+      }
+      .discount_Container {
+        /* border: 2px solid red; */
+      }
+      .discount_Container a:first-child {
+        background-color: #d32e55;
+        padding: 5px 10px;
+        color: white;
+        font-weight: 550;
+        text-decoration: none;
+        border-radius: 3px;
+        font-size: 12px;
+      }
+      .discount_Container a:last-child {
+        padding: 5px 10px;
+        font-size: 14px;
+        color: #d32e55;
+        text-decoration: none;
+      }
+
+      .navFooter {
+        border: 1px solid black;
+        text-align: center;
+        height: 30px;
+        color: rgb(255, 255, 255);
+        padding-top: 15px;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 19px;
+        background-color: #37475a;
+      }
+      .footerParent {
+        padding: 20px 20px 0 150px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        /* border: 1px solid black; */
+        background-color: #232f3e;
+      }
+      .footerChild {
+        /* border: 1px solid black; */
+        width: 20%;
+        height: 100%;
+        text-align: left;
+      }
+      .footerP {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 16.8px;
+        color: rgb(255, 255, 255);
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .bottomPTag {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: white;
+        line-height: 30px;
+        text-align: left;
+      }
+      .bottomPTag:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="screen">
+      <div id="navbar">
+        <div id="leftDiv">
+          <div id="menu">
+            <span class="material-symbols-outlined"> menu </span>
+          </div>
+          <div id="logoDiv">
+            <img
+              style="height: 78%; width: 84%"
+              src="./PngItem_12080.png"
+              alt="Amazon"
+            />
+          </div>
+          <div id="addressDiv">
+            <span class="material-symbols-outlined"> location_on </span>
+            <div>
+              <p id="addressP">Delivering to Mumbai 400070</p>
+              <h5>Update Location</h5>
+            </div>
+          </div>
+        </div>
+
+        <div id="centerDiv">
+          <div id="centerSection">
+            <p>All</p>
+            <span class="material-symbols-outlined"> arrow_drop_down </span>
+          </div>
+          <div id="centerSearch">
+            <input type="text" placeholder="Search Amazon.in" />
+          </div>
+          <div id="centerIcon">
+            <span class="material-symbols-outlined"> search </span>
+          </div>
+        </div>
+        <div id="rightDiv">
+          <div id="rightLang">
+            <img
+              style="height: 14px; width: 20px"
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png"
+              alt="flag"
+            />
+            <p>EN</p>
+            <span class="material-symbols-outlined"> arrow_drop_down </span>
+          </div>
+          <div id="rightAccount">
+            <p>Hello, sign in</p>
+            <div style="display: flex">
+              <h5>Account & List</h5>
+              <span class="material-symbols-outlined"> arrow_drop_down </span>
+            </div>
+          </div>
+          <div id="rightOrders">
+            <p>Returns</p>
+            <h5>& Orders</h5>
+          </div>
+          <div id="rightCart">
+            <span class="material-symbols-outlined"> person </span>
+            <span>Login</span>
+            <span class="material-symbols-outlined"> shopping_cart </span>
+            <span>Cart</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="navBelt">
+        <div class="menuHover" id="All">
+          <span class="material-symbols-outlined"> menu </span>
+          <p>All</p>
+        </div>
+        <div class="menuHover" id="fresh">
+          <p>Fresh</p>
+          <span class="material-symbols-outlined"> arrow_drop_down </span>
+        </div>
+        <div class="menuHover" id="miniTv">Amazon miniTv</div>
+        <div class="menuHover" id="sell">Sell</div>
+        <div class="menuHover" id="Bestseller">Best Sellers</div>
+        <div class="menuHover menuCss">Mobiles</div>
+        <div class="menuHover" id="Deals">Today's Deals</div>
+        <div class="menuHover menuCss">Fashion</div>
+        <div class="menuHover" id="prime">
+          <p>Prime</p>
+          <span class="material-symbols-outlined"> arrow_drop_down </span>
+        </div>
+        <div class="menuHover" id="Electronics">Electronics</div>
+        <div class="menuHover" id="Customer_Service">Customer Service</div>
+        <div class="menuHover" id="NR">New Releases</div>
+        <div class="menuHover" id="hnk">Home & Kitchen</div>
+        <div class="menuHover" id="Pay">Amazon Pay</div>
+        <div class="menuHover" id="Computers">Computers</div>
+        <div class="menuHover" id="Books">Books</div>
+        <div class="menuHover" id="Car">Car & Moterbike</div>
+
+        
+      </div>
+
+      <img
+        class="image-item"
+        src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/Wireless/Madhav/Aug/Apple/D103479793_WLD-BAU-iPhone-15-Series_DesktopTallHero_3000x1200._CB565591242_.jpg"
+        alt="Home Page Banner"
+      />
+
+      <!-- product card -->
+
+      <main class="main">
+        <div class="card-product-container">
+          <div class="card-product">
+            <h2>Starting ₹499 | Amazon Brands & more</h2>
+            <div class="card-product-nested-card">
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/PB/March/Bikram/UNREC_186_ELectronics_4._SY116_CB566415885_.jpg"
+                />
+                <p class="card-nested p">Earbuds|neckbands</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/PB/March/Bikram/UNREC_186_ELectronics_1._SY116_CB566415885_.jpg"
+                />
+                <p class="card-nested p">Power banks</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/PB/March/Bikram/UNREC_186_ELectronics_3._SY116_CB566415885_.jpg"
+                />
+                <p class="card-nested p">Bluetooth speakers</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/pcacc/bau/mso/k1._SY116_CB558492482_.png"
+                />
+                <p class="card-nested p">Gaming accessories</p>
+              </div>
+            </div>
+            <button class="card-product-btn">see more</button>
+          </div>
+          <div class="card-product">
+            <h2>Categories to explore</h2>
+            <div class="card-product-nested-card">
+              <div class="card-nested">
+                <img
+                  src="https://m.media-amazon.com/images/I/61xNG4wjOuL._AC_SY170_.jpg"
+                />
+                <p>Wifi Motherboard</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/I/61MHpEmD3jL._AC_UL165_SR165,165_.jpg"
+                />
+                <p>Gaming PowerSupply</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/I/61-fSJ55oEL._AC_UL100_SR100,100_.jpg"
+                />
+                <p>Casual Wear Shoes</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2024/Gateway/BTFGW/PCQC/New/1x/final/186x116_Home_storage_1._SY116_CB555624324_.jpg"
+                />
+                <p>Home Storage</p>
+              </div>
+            </div>
+            <button class="card-product-btn">see more</button>
+          </div>
+          <div class="card-product">
+            <h2>Deals on keyboard, mouse & more</h2>
+            <div class="card-product-nested-card">
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/pcacc/bau/mso/k1._SY116_CB558492482_.png"
+                />
+                <p>Under ₹10,000</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/pcacc/bau/mso/m1._SY116_CB558492482_.png"
+                />
+                <p>Under ₹10k-25k</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/pcacc/bau/mso/h1._SY116_CB558492482_.png"
+                />
+                <p>Premium ₹25k</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/pcacc/bau/mso/b1._SY116_CB558492482_.png"
+                />
+                <p>Ultra premium ₹45k</p>
+              </div>
+            </div>
+            <button class="card-product-btn">see more</button>
+          </div>
+          <div class="card-product">
+            <h2>Best Seller | Shop now</h2>
+            <img
+              src="https://images-eu.ssl-images-amazon.com/images/I/71vjp8FqE1L._AC_UL165_SR165,165_.jpg"
+              alt=""
+            />
+            <button class="card-product-btn">see more</button>
+          </div>
+        </div>
+
+        <!-- Products in a row -->
+
+        <section class="todays_deals_container">
+          <div class="todays_deals_heading">
+            <h1>Blockbuster deals</h1>
+            <p><a href="#">See all Deals</a></p>
+          </div>
+
+          <div class="todays_deals_product_container">
+            <div class="todays_deals_product_list">
+              <div class="todays_deals_product_item">
+                <img
+                  src="https://m.media-amazon.com/images/I/31qx8K0wm+L._SR480,440_.jpg"
+                  alt=""
+                />
+                <div class="discount_Container">
+                  <a href="#">22% off</a>
+                  <a href="#">Great Freedom Sale</a>
+                </div>
+                <p>Apple ipad(10th generation): with A1...</p>
+              </div>
+
+              <div class="todays_deals_product_item">
+                <img
+                  src="https://m.media-amazon.com/images/I/4143CSktumL._SR480,440_.jpg"
+                  alt=""
+                />
+                <div class="discount_Container">
+                  <a href="#">42% off</a>
+                  <a href="#">Great Freedom Sale</a>
+                </div>
+                <p>Dell [Smartchoice] 15 Thin & Light La...</p>
+              </div>
+
+              <div class="todays_deals_product_item">
+                <img
+                  src="https://m.media-amazon.com/images/I/41fkX++tBSL._SR480,440_.jpg"
+                  alt=""
+                />
+                <div class="discount_Container">
+                  <a href="#">35% off</a>
+                  <a href="#">Great Freedom Sale</a>
+                </div>
+                <p>Hp Laptop 15s,AMD Ryzen 5 5500U,...</p>
+              </div>
+
+              <div class="todays_deals_product_item">
+                <img
+                  src="https://m.media-amazon.com/images/I/415gV21fNCL._SR480,440_.jpg"
+                  alt=""
+                />
+                <div class="discount_Container">
+                  <a href="#">22% off</a>
+                  <a href="#">Great Freedom Sale</a>
+                </div>
+                <p>Xiaomi Pad 6 | Qualcomm Snapdragon...</p>
+              </div>
+
+              <div class="todays_deals_product_item">
+                <img
+                  src="https://m.media-amazon.com/images/I/41BXqwJpz1L._SR480,440_.jpg"
+                  alt=""
+                />
+                <div class="discount_Container">
+                  <a href="#">42% off</a>
+                  <a href="#">Great Freedom Sale</a>
+                </div>
+                <p>HP Laptop 15s,12 Gen Intel Core i5...</p>
+              </div>
+
+              <div class="todays_deals_product_item">
+                <img
+                  src="https://m.media-amazon.com/images/I/41A8MP9gFAL._SR480,440_.jpg"
+                  alt=""
+                />
+                <div class="discount_Container">
+                  <a href="#">35% off</a>
+                  <a href="#">Great Freedom Sale</a>
+                </div>
+                <p>Asus Vivobook 15 Thin and Light La....</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="card-product-container">
+          <div class="card-product">
+            <h2>Up to 80% off | Electronics</h2>
+            <img
+              src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Augart/camera/push/PC_CC_758x6081x._SY304_CB567909772_.jpg"
+              alt=""
+            />
+            <button class="card-product-btn">see more</button>
+          </div>
+          <div class="card-product">
+            <h2>Deals on headsets for your smartphone brands</h2>
+            <div class="card-product-nested-card">
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2024/AugART_24/MSO/SHOVELLER/PC_QC_186x116_03._SY116_CB568075485_.jpg"
+                />
+                <p class="card-nested p">Samsung | 55% off</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2024/AugART_24/MSO/SHOVELLER/PC_QC_186x116_02._SY116_CB568075485_.jpg"
+                />
+                <p class="card-nested p">Oneplus Starting ₹699</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2024/AugART_24/MSO/SHOVELLER/PC_QC_186x116_04._SY116_CB568075485_.jpg"
+                />
+                <p class="card-nested p">Mivi | Up to 75% off</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/WLA/2024/AugART_24/MSO/SHOVELLER/PC_QC_186x116_01._SY116_CB568075485_.jpg"
+                />
+                <p class="card-nested p">realme | Up to 55% off</p>
+              </div>
+            </div>
+            <button class="card-product-btn">see more</button>
+          </div>
+
+          <div class="card-product">
+            <h2>Deals on Travel Suitcase in your budget</h2>
+            <a href="product.html"
+              ><img
+                style="height: 265px; width: 200px; padding-left: 20%"
+                src="https://m.media-amazon.com/images/I/31IExim4BiL._MCnd_AC_.jpg"
+                alt=""
+              />
+            </a>
+            <button class="card-product-btn">see more</button>
+          </div>
+          <div class="card-product">
+            <h2>Unique products from Small businesses</h2>
+            <div class="card-product-nested-card">
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/Img24/SMB/AugART/Program_QC_PC_NAM_186x116._SY116_CB566449441_.jpg"
+                />
+                <p class="card-nested p">Home decor</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/Img24/SMB/AugART/Program_QC_PC_NSS_186x116._SY116_CB566449441_.jpg"
+                />
+                <p class="card-nested p">Emerging businesses</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/Img24/SMB/AugART/Program_QC_PC_Launchpad_186x116._SY116_CB566449441_.jpg"
+                />
+                <p class="card-nested p">Emerging brands</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/Img24/SMB/AugART/Program_QC_PC_Local_Shops_186x116._SY116_CB566449441_.jpgx"
+                />
+                <p class="card-nested p">Bajaj moterbikes</p>
+              </div>
+            </div>
+
+            <button class="card-product-btn">see more</button>
+          </div>
+        </div>
+
+        <!-- Products in a row -->
+
+        <section class="todays_deals_container">
+          <div class="todays_deals_heading">
+            <h1>Trending deals</h1>
+            <p><a href="#">See all Deals</a></p>
+          </div>
+
+          <div class="todays_deals_product_container">
+            <div class="todays_deals_product_list">
+              <div class="todays_deals_product_item">
+                <img
+                  src="https://m.media-amazon.com/images/I/31BTnXeDegL._SR480,440_.jpg"
+                  alt=""
+                />
+                <div class="discount_Container">
+                  <a href="#">88% off</a>
+                  <a href="#">Great Freedom Sale</a>
+                </div>
+                <p>Lymio Men Cargo || Men Cargo Pants|...</p>
+              </div>
+
+              <div class="todays_deals_product_item">
+                <img
+                  src="https://m.media-amazon.com/images/I/41n5ynGun-L._SR480,440_.jpg"
+                  alt=""
+                />
+                <div class="discount_Container">
+                  <a href="#">40% off</a>
+                  <a href="#">Great Freedom Sale</a>
+                </div>
+                <p>Tusa Cordless Vaccum Cleaner for Car...</p>
+              </div>
+
+              <div class="todays_deals_product_item">
+                <img
+                  src="https://m.media-amazon.com/images/I/41dWvmXCkEL._SR480,440_.jpg"
+                  alt=""
+                />
+                <div class="discount_Container">
+                  <a href="#">50% off</a>
+                  <a href="#">Great Freedom Sale</a>
+                </div>
+                <p>Amazon Brand - Presto! Active...</p>
+              </div>
+
+              <div class="todays_deals_product_item">
+                <img
+                  src="https://m.media-amazon.com/images/I/41RLAV5oWyL._SR480,440_.jpg"
+                  alt=""
+                />
+                <div class="discount_Container">
+                  <a href="#">22% off</a>
+                  <a href="#">Great Freedom Sale</a>
+                </div>
+                <p>AQUA D PURE 4 in 1 Copper RO Water...</p>
+              </div>
+
+              <div class="todays_deals_product_item">
+                <img
+                  src="https://m.media-amazon.com/images/I/31h1uMwf6qL._SR480,440_.jpg"
+                  alt=""
+                />
+                <div class="discount_Container">
+                  <a href="#">42% off</a>
+                  <a href="#">Great Freedom Sale</a>
+                </div>
+                <p>Qubo Car Dash Camera Pro X 3MP 12...</p>
+              </div>
+
+              <div class="todays_deals_product_item">
+                <img
+                  src="https://m.media-amazon.com/images/I/319qK9K-nYL._SR480,440_.jpg"
+                  alt=""
+                />
+                <div class="discount_Container">
+                  <a href="#">45% off</a>
+                  <a href="#">Great Freedom Sale</a>
+                </div>
+                <p>Van Heusen Men's Solid Polo T Regular....</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="card-product-container">
+          <div class="card-product">
+            <h2>Up to 75% off | Refurbished products</h2>
+            <div class="card-product-nested-card">
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/certified_refurbished/anjaga/RenewedMarketing2024/AugART24/AugARTGW/1_PC_QC_186x116._SY116_CB566405452_.jpg"
+                />
+                <p class="card-nested p">Laptops</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/certified_refurbished/anjaga/RenewedMarketing2024/AugART24/AugARTGW/2_PC_QC_186x116._SY116_CB566405452_.jpg"
+                />
+                <p class="card-nested p">Mobiles</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/certified_refurbished/anjaga/RenewedMarketing2024/AugART24/AugARTGW/3_PC_QC_186x116._SY116_CB566405452_.jpg"
+                />
+                <p class="card-nested p">Headphones</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/certified_refurbished/anjaga/RenewedMarketing2024/AugART24/AugARTGW/4_PC_QC_186x116._SY116_CB566405452_.jpg"
+                />
+                <p class="card-nested p">Kitchen appliances</p>
+              </div>
+            </div>
+            <button class="card-product-btn">see more</button>
+          </div>
+          <div class="card-product">
+            <h2>Minimum 50% off | Home, kitchen & more</h2>
+            <div class="card-product-nested-card">
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Aug24_OHL/PC_1x_sports._SY116_CB566473357_.jpg"
+                />
+                <p class="card-nested p">Sports & fitness</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Aug24_OHL/PC_1x_auto._SY116_CB566473357_.jpg"
+                />
+                <p class="card-nested p">Automotive</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Aug24_OHL/PC_1x_biss._SY116_CB566473357_.jpg"
+                />
+                <p class="card-nested p">Tools</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Aug24_OHL/PC_1x_gardren._SY116_CB566473357_.jpg"
+                />
+                <p class="card-nested p">Garden & outdoor</p>
+              </div>
+            </div>
+            <button class="card-product-btn">see more</button>
+          </div>
+
+          <div class="card-product">
+            <h2>Minimum 50% off | Home, kitchen & more</h2>
+            <div class="card-product-nested-card">
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Aug24_OHL/PC_1x_kitchen._SY116_CB566465041_.jpg"
+                />
+                <p class="card-nested p">Kitchen essentials</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Aug24_OHL/PC_1x_home._SY116_CB566465041_.jpg"
+                />
+                <p class="card-nested p">Home decor</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Aug24_OHL/PC_1x_fur._SY116_CB566465041_.jpg"
+                />
+                <p class="card-nested p">Furniture</p>
+              </div>
+              <div class="card-nested">
+                <img
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Aug24_OHL/PC_1x_hi._SY116_CB566465041_.jpg"
+                />
+                <p class="card-nested p">Home improvement</p>
+              </div>
+            </div>
+            <button class="card-product-btn">see more</button>
+          </div>
+
+          <div class="card-product">
+            <h2>Up to 40% off | Deals on mobiles and accessories</h2>
+            <img
+              src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wireless/riya/MSOuberAug/PC_CC_379x304._SY304_CB568287984_.jpg"
+              alt=""
+            />
+            <button class="card-product-btn">see more</button>
+          </div>
+        </div>
+
+        <!-- Products in a row -->
+
+        <section class="todays_deals_container">
+          <div style="padding-top: 20px" class="todays_deals_heading">
+            <h1>Shop deals in top categories</h1>
+            <p><a href="#">Explore all categories</a></p>
+          </div>
+
+          <div class="todays_deals_product_container">
+            <div class="todays_deals_product_list">
+              <div class="todays_deals_product_item">
+                <img
+                  style="margin-top: 20px"
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/Banhita/AugART2024/1x_PC_Shovler._CB567472261_.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="todays_deals_product_item">
+                <img
+                  style="margin-top: 20px"
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/AugArt24/CEPC/Desktop/Shoveler/1X._CB569170883_.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="todays_deals_product_item">
+                <img
+                  style="margin-top: 20px"
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Aug24_OHL/PC_Shovler_1_1x._CB567457759_.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="todays_deals_product_item">
+                <img
+                  style="margin-top: 20px"
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/TVs/Abhilasha/aug_art_2/D135801354_IN_HETV_Shoveler_Abhilasha_AUG-ART_24_PC_Shovler_200x200._CB569186154_.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="todays_deals_product_item">
+                <img
+                  style="margin-top: 20px"
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/INSLGW/augart24_sl_1x._CB569136728_.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="todays_deals_product_item">
+                <img
+                  style="margin-top: 20px"
+                  src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/Consumables/AugART24/CentralAssets/Cons_PC_Shovler_1x._CB567471372_.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="card-product-container">
+          <div class="card-product">
+            <h2>Starting ₹99 | Start your fitness journey</h2>
+
+            <img
+              src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/Sports/GW_Desktop/1199101_379x304_Compressed._SY304_CB448278349_.jpg"
+              alt=""
+            />
+            <button class="card-product-btn">see more</button>
+          </div>
+          <div class="card-product">
+            <h2>Up to 60% off | Car, bike parts & accessories</h2>
+
+            <img
+              src="https://images-eu.ssl-images-amazon.com/images/G/31/2023/GateWay/December/CC/PC_379x304_1._SY304_CB572341311_.jpg"
+              alt=""
+            />
+            <button class="card-product-btn">see more</button>
+          </div>
+
+          <div class="card-product">
+            <h2>Yeh Meri Family | Season 4 | Streaming Now</h2>
+
+            <img
+              src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/SiddMiniTV/DeskCC-379x304_V2_NS._SY304_CB567084151_.jpg"
+              alt=""
+            />
+            <button class="card-product-btn">see more</button>
+          </div>
+
+          <div class="card-product">
+            <h2>Up to 50% off | International brands</h2>
+
+            <img
+              src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/OOC/Gateway/OOC/379X304._SY304_CB567944907_.jpg"
+              alt=""
+            />
+            <button class="card-product-btn">see more</button>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-top">
+            <a href="#" class="back-to-top">Back to top</a>
+        </div>
+        <div class="footer-middle">
+            <div class="footer-column">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About Amazon</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Amazon Devices</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Make Money with Us</h3>
+                <ul>
+                    <li><a href="#">Sell on Amazon</a></li>
+                    <li><a href="#">Sell on Amazon Business</a></li>
+                    <li><a href="#">Sell Your Apps on Amazon</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                    <li><a href="#">Advertise Your Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Amazon Payment Products</h3>
+                <ul>
+                    <li><a href="#">Amazon Business Card</a></li>
+                    <li><a href="#">Shop with Points</a></li>
+                    <li><a href="#">Reload Your Balance</a></li>
+                    <li><a href="#">Amazon Currency Converter</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="#">Amazon and COVID-19</a></li>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                    <li><a href="#">Shipping Rates & Policies</a></li>
+                    <li><a href="#">Returns & Replacements</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <ul class="footer-bottom-links">
+                <li><a href="#">Privacy Notice</a></li>
+                <li><a href="#">Conditions of Use</a></li>
+                <li><a href="#">Interest-Based Ads</a></li>
+                <li>&copy; 2024, YourCompany.com, Inc. or its affiliates</li>
+            </ul>
+        </div>
+    </footer>
+    </div>
+  </body>
+</html>
