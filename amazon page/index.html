@@ -178,8 +178,12 @@
       #rightLang > span {
         color: rgb(206, 206, 206);
       }
-
+      #rightAccount>a>p{
+        text-decoration: none;
+        color:white
+      }
       #rightAccount {
+        
         width: 30%;
         /* border: 1px solid white; */
         display: flex;
@@ -188,8 +192,10 @@
         text-align: left;
       }
       #rightAccount p {
+        color:white;
         font-size: 12px;
         font-weight: 500;
+        text-decoration: none;
       }
       #rightAccount span {
         margin-top: -6px;
@@ -707,6 +713,12 @@
       .bottomPTag:hover {
         text-decoration: underline;
       }
+      a:hover{
+        color:white
+      }
+      a::before{
+        color:white
+      }
     </style>
   </head>
   <body>
@@ -754,13 +766,15 @@
             <p>EN</p>
             <span class="material-symbols-outlined"> arrow_drop_down </span>
           </div>
+          <a style="text-decoration: none;" href="form.html">
           <div id="rightAccount">
-            <p>Hello, sign in</p>
+            <p>SIGN IN</a></p>
             <div style="display: flex">
               <h5>Account & List</h5>
               <span class="material-symbols-outlined"> arrow_drop_down </span>
             </div>
           </div>
+        </a>
           <div id="rightOrders">
             <p>Returns</p>
             <h5>& Orders</h5>
